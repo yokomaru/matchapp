@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChatMessagesTable extends Migration
+class CreateChatRoomUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateChatMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('chat_messages', function (Blueprint $table) {
+        Schema::create('chat_room_users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('chat_room_id');
-            $table->integer('user_id');
-            $table->string('message');
+            $table->integer('chat_room_id'); // この行を追加
+            $table->integer('user_id'); // この行を追加
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateChatMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chat_messages');
+        Schema::dropIfExists('chat_room_users');
     }
 }
