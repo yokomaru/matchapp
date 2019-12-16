@@ -6,8 +6,8 @@ use Intervention\Image\Facades\Image;
 use App\Services\CheckExtensionServices;
 use App\Services\FileUploadServices;
 use Illuminate\Http\Request;
-use App\User;
 use App\Http\Requests\ProfileRequest;
+use App\User;
 
 class UserController extends Controller
 {
